@@ -7,56 +7,59 @@ public class PlayerMovement : MonoBehaviour
     private float xDir;
     private float zDir;
 
-    private float speed;
+    public float speed;
+    public float rotationSpeed;
     private float boost;
+    private float overallSpeed;
     // Start is called before the first frame update
     void Start()
     {
         if (speed == 0)
         {
-            speed = 0.01f;
+            speed = 10f;
+        }
+
+        if (rotationSpeed == 0)
+        {
+            rotationSpeed = 100f;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Get values
-        if (Input.GetKey(KeyCode.W))
+        overallSpeed = speed + boost;
+
+        if (Input.GetKey(KeyCode.E))
         {
-            zDir = speed + boost;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            zDir = -speed - boost;
-        }
-        else
-        {
-            zDir = 0;
+            transform.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.Q))
         {
-            xDir = speed + boost;
+            transform.Rotate(0.0f, -rotationSpeed * Time.deltaTime, 0.0f);
         }
-        else if (Input.GetKey(KeyCode.A))
+
+        Vector3 velocity = Vector3.zero;
+        if (Input.GetKey(KeyCode.W))
         {
-            xDir = -speed - boost;
+            velocity += transform.forward;
         }
-        else
+
+        else if (Input.GetKey(KeyCode.S))
         {
-            xDir = 0;
+            velocity -= transform.forward;
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            boost = speed;
+            boost = speed / 1.5f;
         }
-        else { boost = 0; }
+        else
+        {
+            boost = 0.0f;
+        }
 
-
-
-        //Apply values
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x + xDir, gameObject.transform.position.y , gameObject.transform.position.z + zDir);
+        transform.position += velocity * overallSpeed * Time.deltaTime;
     }
 }
