@@ -1702,6 +1702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077697660}
+  - component: {fileID: 1077697661}
   m_Layer: 0
   m_Name: protoMap_obstacles
   m_TagString: Untagged
@@ -1732,6 +1733,33 @@ Transform:
   - {fileID: 1176430031}
   m_Father: {fileID: 1144434006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1077697661
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077697659}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1144434005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2295,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030135691}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2072177511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667486536602628341, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+  m_PrefabInstance: {fileID: 5202271362567697928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2072177517 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8373511926474645635, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+  m_PrefabInstance: {fileID: 5202271362567697928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &924180961824916638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2319,6 +2357,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 13b0b2a03199d3e4bb8fc479ca04e158, type: 2}
+    - target: {fileID: 4630922425685911919, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2072177517}
+    - target: {fileID: 6000824344943892085, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2072177511}
     - target: {fileID: 6550501373816220932, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_Name
       value: EnemyTank
@@ -2326,6 +2372,10 @@ PrefabInstance:
     - target: {fileID: 6909408317842160093, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6909408317842160093, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6909408317842160093, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_CollisionDetection
@@ -2368,6 +2418,10 @@ PrefabInstance:
     - target: {fileID: 2612569093333349305, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612569093333349305, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 2612569093333349305, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
       propertyPath: m_CollisionDetection
