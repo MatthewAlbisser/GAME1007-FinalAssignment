@@ -5,7 +5,6 @@ public class EnemyRoaming : MonoBehaviour
     public Transform[] waypoints;
     private int NextWaypoint = 0;
 
-    public float speed = 5f;
     public float movementSpeed = 5f;
     public float rotationSpeed = 2f;
 
@@ -27,7 +26,7 @@ public class EnemyRoaming : MonoBehaviour
 
         transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);  // Move forward in facing direction
 
-        if (Vector3.Distance(transform.position, waypoints[NextWaypoint].position) < 0.1f)  // Check if reached waypoint
+        if (Vector3.Distance(transform.position, waypoints[NextWaypoint].position) < 0.2f)  // Check if reached waypoint
         {
             NextWaypoint = (NextWaypoint + 1) % waypoints.Length;   // Move to next
         }
@@ -35,6 +34,10 @@ public class EnemyRoaming : MonoBehaviour
         if (NextWaypoint > 3)
         {
             NextWaypoint = 0;
+        }
+        if (waypoints.Length > 0)
+        {
+            Debug.DrawLine(transform.position, waypoints[NextWaypoint].position, Color.red);
         }
     }
 }
