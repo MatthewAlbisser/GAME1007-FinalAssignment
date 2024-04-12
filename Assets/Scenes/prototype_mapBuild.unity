@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 303311617}
   m_Layer: 0
   m_Name: protoMap_walls_westWall
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 496674921}
   m_Layer: 0
   m_Name: protoMap_walls_eastWall
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 545606787}
   m_Layer: 0
   m_Name: protoMap_walls_northWall
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 643351759}
   m_Layer: 0
   m_Name: protoMap_obstacles_diaA
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 689275354}
   m_Layer: 0
   m_Name: protoMap_floor
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 739788653}
   m_Layer: 0
   m_Name: protoMap_obstacles_cubeA
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1269,7 +1269,7 @@ GameObject:
   - component: {fileID: 759402635}
   m_Layer: 0
   m_Name: protoMap_obstacles_recA
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1602,7 +1602,7 @@ GameObject:
   - component: {fileID: 1064838659}
   m_Layer: 0
   m_Name: protoMap_walls_southWall
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,7 +1704,7 @@ GameObject:
   - component: {fileID: 1077697660}
   m_Layer: 0
   m_Name: protoMap_obstacles
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1744,7 +1744,7 @@ GameObject:
   - component: {fileID: 1144434007}
   m_Layer: 0
   m_Name: protoMap
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1808,7 +1808,7 @@ GameObject:
   - component: {fileID: 1176430032}
   m_Layer: 0
   m_Name: protoMap_obstacles_diaB
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1910,7 +1910,7 @@ GameObject:
   - component: {fileID: 1317350357}
   m_Layer: 0
   m_Name: protoMap_obstacles_Lb
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1943,7 +1943,7 @@ GameObject:
   - component: {fileID: 1540641060}
   m_Layer: 0
   m_Name: protoMap_walls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,7 +1981,7 @@ GameObject:
   - component: {fileID: 1598562228}
   m_Layer: 0
   m_Name: protoMap_obstacles_cubeB
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 1991358150}
   m_Layer: 0
   m_Name: protoMap_obstacles_La
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2154,7 +2154,7 @@ GameObject:
   - component: {fileID: 2030135693}
   m_Layer: 0
   m_Name: protoMap_obstacles_recB
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2397,6 +2397,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 0afbb0360a530794a9e96a8ef7684d45, type: 2}
     - target: {fileID: 7275217053327068678, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907385376093706169, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
