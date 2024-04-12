@@ -516,6 +516,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4630922425685911919, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5202271362567697929}
     - target: {fileID: 6550501373816220932, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_Name
       value: EnemyTank
@@ -602,6 +606,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+--- !u!4 &5202271362567697929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8373511926474645635, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+  m_PrefabInstance: {fileID: 5202271362567697928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
