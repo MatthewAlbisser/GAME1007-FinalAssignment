@@ -533,6 +533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTank
       objectReference: {fileID: 0}
+    - target: {fileID: 6909408317842160093, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 8094624356395322639, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
