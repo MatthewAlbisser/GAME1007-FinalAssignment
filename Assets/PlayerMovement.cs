@@ -43,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
-            velocity += transform.forward;
+            velocity -= transform.forward;
         }
 
         else if (Input.GetKey(KeyCode.S))
         {
-            velocity -= transform.forward;
+            velocity += transform.forward;
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
