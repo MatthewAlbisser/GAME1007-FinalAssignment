@@ -2303,10 +2303,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2588061898722473120, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2704904316029529145, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 13b0b2a03199d3e4bb8fc479ca04e158, type: 2}
+    - target: {fileID: 2993005977320475863, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4630922425685911919, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: player
       value: 
@@ -2318,6 +2326,10 @@ PrefabInstance:
     - target: {fileID: 6550501373816220932, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_Name
       value: EnemyTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550501373816220932, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6909408317842160093, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_UseGravity
@@ -2385,6 +2397,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0afbb0360a530794a9e96a8ef7684d45, type: 2}
+    - target: {fileID: 7275217053327068678, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8373511926474645635, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -2427,6 +2443,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667486536602628341, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667486536602628341, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8762640789967764242, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
