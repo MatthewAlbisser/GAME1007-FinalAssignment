@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float xDir;
-    private float yDir;
+    private float zDir;
 
     private float speed;
     private float boost;
@@ -24,15 +24,15 @@ public class PlayerMovement : MonoBehaviour
         //Get values
         if (Input.GetKey(KeyCode.W))
         {
-            yDir = speed + boost;
+            zDir = speed + boost;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            yDir = -speed - boost;
+            zDir = -speed - boost;
         }
         else
         {
-            yDir = 0;
+            zDir = 0;
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -57,6 +57,6 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Apply values
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x + xDir, gameObject.transform.position.y + yDir, gameObject.transform.position.z);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x + xDir, gameObject.transform.position.y , gameObject.transform.position.z + zDir);
     }
 }
