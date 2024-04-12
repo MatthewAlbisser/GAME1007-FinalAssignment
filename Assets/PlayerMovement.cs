@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float xDir;
-    private float zDir;
+    private Rigidbody rb;
+    public float speed = 10f;
+    public float rotationSpeed = 100f;
 
-    public float speed;
-    public float rotationSpeed;
-    private float boost;
-    private float overallSpeed;
-    // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+
         if (speed == 0)
         {
             speed = 10f;
@@ -24,42 +22,56 @@ public class PlayerMovement : MonoBehaviour
             rotationSpeed = 100f;
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        overallSpeed = speed + boost;
+        // WASD Controls
+        float Horizontal = Input.GetAxis("Horizontal");
+        float Vertical = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.E))
-        {
-            transform.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
-        }
-
-        else if (Input.GetKey(KeyCode.Q))
-        {
-            transform.Rotate(0.0f, -rotationSpeed * Time.deltaTime, 0.0f);
-        }
-
-        Vector3 velocity = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            velocity -= transform.forward;
-        }
-
-        else if (Input.GetKey(KeyCode.S))
-        {
-            velocity += transform.forward;
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            boost = speed / 1.5f;
-        }
-        else
-        {
-            boost = 0.0f;
-        }
-
-        transform.position += velocity * overallSpeed * Time.deltaTime;
+        // Forwards and Backwards
+        Vector3 movement = new Vector3(0, 0, Vertical);
+        rb.velocity = (transform.forward * speed * Vertical);
+        // Body Rotation
+        float rotation = Horizontal * rotationSpeed * Time.deltaTime;
+        transform.Rotate(Vector3.up, rotation);
     }
 }
+
+//    // Update is called once per frame
+//    void Update()
+//    {
+//        overallSpeed = speed + boost;
+
+//        if (Input.GetKey(KeyCode.E))
+//        {
+//            transform.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
+//        }
+
+//        else if (Input.GetKey(KeyCode.Q))
+//        {
+//            transform.Rotate(0.0f, -rotationSpeed * Time.deltaTime, 0.0f);
+//        }
+
+//        Vector3 velocity = Vector3.zero;
+//        if (Input.GetKey(KeyCode.W))
+//        {
+//            velocity -= transform.forward;
+//        }
+
+//        else if (Input.GetKey(KeyCode.S))
+//        {
+//            velocity += transform.forward;
+//        }
+
+//        if (Input.GetKey(KeyCode.LeftShift))
+//        {
+//            boost = speed / 1.5f;
+//        }
+//        else
+//        {
+//            boost = 0.0f;
+//        }
+
+//        transform.position += velocity * overallSpeed * Time.deltaTime;
+//    }
+//}
