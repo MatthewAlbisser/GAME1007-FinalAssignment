@@ -154,6 +154,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1797947653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &308118216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667486536602628341, guid: 3a3652659b475d34ca60529378d6abc2, type: 3}
+  m_PrefabInstance: {fileID: 5202271362567697928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &498911861
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +525,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 5202271362567697929}
+    - target: {fileID: 6000824344943892085, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 308118216}
     - target: {fileID: 6550501373816220932, guid: 1044ed7a25e00de4d95df35f7ee6af3d, type: 3}
       propertyPath: m_Name
       value: EnemyTank
