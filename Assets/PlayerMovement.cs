@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     public float speed = 10f;
     public float rotationSpeed = 100f;
+    private float overallSpeed;
+    private float boost;
 
     void Start()
     {
@@ -24,13 +26,24 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        overallSpeed = speed + boost;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            boost = speed / 1.5f;
+        }
+        else
+        {
+            boost = 0;
+        }
+
         // WASD Controls
         float Horizontal = Input.GetAxis("Horizontal");
         float Vertical = Input.GetAxis("Vertical");
 
         // Forwards and Backwards
         Vector3 movement = new Vector3(0, 0, Vertical);
-        rb.velocity = (transform.forward * speed * Vertical);
+        rb.velocity = (transform.forward * overallSpeed * Vertical);
         // Body Rotation
         float rotation = Horizontal * rotationSpeed * Time.deltaTime;
         transform.Rotate(Vector3.up, rotation);
