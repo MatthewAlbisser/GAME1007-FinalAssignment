@@ -37,4 +37,13 @@ public class EnemyShoot : MonoBehaviour
         }
 
     }
+    private void OnCollision(Collider collision)
+    {
+
+        if (collision.GetComponent<Health>() != null)
+        {
+            collision.GetComponent<Health>().health -= 1;
+        }
+
+    }
 }

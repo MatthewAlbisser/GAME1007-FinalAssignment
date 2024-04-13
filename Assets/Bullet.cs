@@ -21,5 +21,11 @@ public class Bullet : MonoBehaviour
             Vector3 normal = collision.contacts[0].normal;
             velocity = Vector3.Reflect(velocity, normal);
         }
+
+        else if (collision.gameObject.GetComponent<Health>() != null)
+        {
+            collision.gameObject.GetComponent<Health>().health -= 1;
+            Destroy(gameObject);
+        }
     }
 }
