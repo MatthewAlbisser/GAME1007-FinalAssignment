@@ -147,7 +147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0afbb0360a530794a9e96a8ef7684d45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -184,6 +184,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   shootPoint: {fileID: 1622018505057403844}
   Bullet: {fileID: 8785974470788265084, guid: 19739fa1fa620404482c29e178e89518, type: 3}
+  cooldown: 0
 --- !u!1 &7907385376093706169
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +230,7 @@ GameObject:
   - component: {fileID: 8669746523623035542}
   - component: {fileID: 3438673563013811089}
   - component: {fileID: 2612569093333349305}
+  - component: {fileID: 7274401780795577090}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -280,7 +282,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0afbb0360a530794a9e96a8ef7684d45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -364,3 +366,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &7274401780795577090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667486536602628341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58ee6066a267fd4ab3cc56ea28c34cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5

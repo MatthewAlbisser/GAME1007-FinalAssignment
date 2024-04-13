@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TankAiming : MonoBehaviour
@@ -8,9 +9,11 @@ public class TankAiming : MonoBehaviour
     public Transform shootPoint;
     private Vector3 BulletDirection = Vector3.zero;
     public GameObject Bullet;
+    public float cooldown;
 
     void Update()
     {
+        cooldown -= Time.deltaTime;
         Vector3 point = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
         // Using some math to calculate the point of intersection between the line going through the camera and the mouse position with the XZ-Plane
         float t = cam.transform.position.y / (cam.transform.position.y - point.y);
@@ -20,11 +23,12 @@ public class TankAiming : MonoBehaviour
 
 
         BulletDirection = (finalPoint - shootPoint.transform.position).normalized;
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && cooldown <= 0)
         {
             GameObject bulletClone = GameObject.Instantiate(Bullet, shootPoint.transform.position + BulletDirection, Quaternion.identity);
             bulletClone.GetComponent<Rigidbody>().velocity = BulletDirection * 20;
             Destroy(bulletClone, 5f);
+            cooldown = 2;
         }
     }
 }
